@@ -62,3 +62,7 @@ In the [tests](./tests) directory, you can find [test_deepmd_simulation.py](./te
 That's used for running of this plugin with on trained [water model](./tests/frozen_model/water.pb).
 Alchemical simulation feature for Deepmd-kit is also implemented in this plugin. 
 More details about the alchemical simulation can be refered to [AlchemicalProtocol.pdf](./tests/refer/AlchemicalProtocol.pdf).
+
+https://github.com/JingHuangLab/openmm_deepmd_plugin/blob/master/python/tests/test_deepmd_dp_region.py 这个脚本把使用DP模拟了体系中选定的部分水分子进行运动，可以稍作修改用于蛋白-配体中将DP用于配体内部的相互作用模拟。
+
+https://github.com/JingHuangLab/openmm_deepmd_plugin/blob/master/python/tests/test_deepmd_multi_dp_adaptive_region.py 这个脚本则是使用DP/MM直接模拟了含锌蛋白。锌离子跟蛋白配体被动态选入进DP模型当中，这部分原子受力则是DP与MM力场之和。
